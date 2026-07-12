@@ -1,0 +1,105 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Sora", "Plus Jakarta Sans", sans-serif;
+
+  --color-royal: #174EA6;
+  --color-royal-dark: #0f3671;
+  --color-royal-deep: #0a2452;
+  --color-solar: #F97316;
+  --color-gold: #FDB813;
+  --color-leaf: #16A34A;
+  --color-ink: #0b1220;
+  --color-muted-ink: #4b5568;
+  --color-cloud: #f5f8ff;
+  --color-line: #e6ecf5;
+
+  --color-background: #ffffff;
+  --color-foreground: #0b1220;
+  --color-primary: #174EA6;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #F97316;
+  --color-secondary-foreground: #ffffff;
+  --color-muted: #f5f8ff;
+  --color-muted-foreground: #4b5568;
+  --color-accent: #FDB813;
+  --color-accent-foreground: #0b1220;
+  --color-border: #e6ecf5;
+  --color-input: #e6ecf5;
+  --color-ring: #174EA6;
+  --color-card: #ffffff;
+  --color-card-foreground: #0b1220;
+
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+
+  --shadow-soft: 0 10px 40px -12px rgba(23, 78, 166, 0.18);
+  --shadow-glow: 0 20px 60px -20px rgba(249, 115, 22, 0.45);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+.gradient-royal {
+  background: linear-gradient(135deg, #174EA6 0%, #0a2452 100%);
+}
+.gradient-sun {
+  background: linear-gradient(135deg, #F97316 0%, #FDB813 100%);
+}
+.text-gradient-royal {
+  background: linear-gradient(135deg, #174EA6, #F97316 60%, #FDB813);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+}
+.glass-dark {
+  background: rgba(10, 36, 82, 0.55);
+  backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.section {
+  padding: clamp(4rem, 8vw, 7rem) 1.25rem;
+}
+
+.hero-pattern {
+  background-image:
+    radial-gradient(circle at 20% 10%, rgba(253, 184, 19, 0.18), transparent 45%),
+    radial-gradient(circle at 80% 20%, rgba(249, 115, 22, 0.18), transparent 45%),
+    radial-gradient(circle at 50% 100%, rgba(23, 78, 166, 0.35), transparent 55%);
+}
+
+.grid-lines {
+  background-image:
+    linear-gradient(to right, rgba(23, 78, 166, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(23, 78, 166, 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Hide scrollbar for horizontal scrollers */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
